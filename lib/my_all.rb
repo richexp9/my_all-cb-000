@@ -9,7 +9,7 @@ def my_all?(array)
   end
   collection
 
-  if block_return_values.include?(false)
+  if collection.include?(false)
    false
  else
    true
