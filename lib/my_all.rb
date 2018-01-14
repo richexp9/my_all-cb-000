@@ -8,4 +8,10 @@ def my_all?(array)
     i += 1
   end
   collection
+
+  if block_return_values.include?(false)
+   false
+ else
+   true
+ end
 end
