@@ -1,17 +1,14 @@
-require 'pry'
-
-def my_all?(array)
+def my_all?(collection)
   i = 0
-  collection =[]
-  while i < collection.size
-    collection<<yield(array[i])
-    i += 1
+  block_return_values = []
+  while i < collection.length
+    block_return_values << yield(collection[i])
+    i = i + 1
   end
-  collection
 
-  if collection.include?(false)
-   false
- else
-   true
- end
+  if block_return_values.include?(false)
+    false
+  else
+    true
+  end
 end
